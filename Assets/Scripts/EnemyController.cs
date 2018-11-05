@@ -9,7 +9,7 @@ public enum MovementDirection{
 
 public class EnemyController : MonoBehaviour {
 
-    private Vector2 currentDirection;
+    public Vector2 currentDirection;
     public float speed = 0.118f;
 
     public MovementDirection movementDirection;
