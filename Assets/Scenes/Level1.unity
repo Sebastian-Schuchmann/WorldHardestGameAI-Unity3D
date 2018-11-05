@@ -308,7 +308,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.07
+  speed: 0.06
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -645,7 +645,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.07
+  speed: 0.06
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -808,7 +808,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.07
+  speed: 0.06
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -1110,7 +1110,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.07
+  speed: 0.06
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -1311,7 +1311,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.18
+  m_Radius: 0.2
 --- !u!50 &498928688
 Rigidbody2D:
   serializedVersion: 4
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDirection: {x: 0, y: 0}
-  speed: 0.118
+  speed: 0.129
   movementDirection: 1
 --- !u!1 &518664889
 GameObject:
@@ -1426,7 +1426,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.3511977
+  orthographic size: 7.91
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1782,7 +1782,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.07
+  speed: 0.06
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -2110,7 +2110,7 @@ MonoBehaviour:
   LogData: 1
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.07
+  speed: 0.055
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -2310,7 +2310,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.18
+  m_Radius: 0.2
 --- !u!50 &895425174
 Rigidbody2D:
   serializedVersion: 4
@@ -2343,7 +2343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDirection: {x: 0, y: 0}
-  speed: 0.118
+  speed: 0.129
   movementDirection: 0
 --- !u!1 &1091509279
 GameObject:
@@ -2758,7 +2758,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.07
+  speed: 0.06
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -3083,7 +3083,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.18
+  m_Radius: 0.2
 --- !u!50 &1431185573
 Rigidbody2D:
   serializedVersion: 4
@@ -3116,7 +3116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDirection: {x: 0, y: 0}
-  speed: 0.118
+  speed: 0.129
   movementDirection: 1
 --- !u!1 &1433284520
 GameObject:
@@ -3457,7 +3457,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.18
+  m_Radius: 0.2
 --- !u!114 &1536108244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3470,7 +3470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDirection: {x: 0, y: 0}
-  speed: 0.118
+  speed: 0.129
   movementDirection: 0
 --- !u!50 &1536108245
 Rigidbody2D:
@@ -3546,7 +3546,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.07
+  speed: 0.06
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -3784,7 +3784,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.07
+  speed: 0.06
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -4048,7 +4048,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.07
+  speed: 0.06
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -4211,7 +4211,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.07
+  speed: 0.06
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -4412,7 +4412,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.18
+  m_Radius: 0.2
 --- !u!50 &2141192873
 Rigidbody2D:
   serializedVersion: 4
@@ -4445,5 +4445,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDirection: {x: 0, y: 0}
-  speed: 0.118
+  speed: 0.129
   movementDirection: 0
