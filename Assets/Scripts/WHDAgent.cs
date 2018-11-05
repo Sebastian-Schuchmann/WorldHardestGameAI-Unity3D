@@ -155,37 +155,42 @@ public class WHDAgent : Agent
             AgentReset();
         }
 
+       Debug.Log((int)vectorAction[0]);
+        Debug.Log((int)vectorAction[1]);
         // playerController.HorizontalInput = vectorAction[0];
         // playerController.VerticalInput = vectorAction[1];
         switch ((int)vectorAction[0])
         {
-            case 0:
-                VerticalInput = 1.0f;
-                HorizontalInput = 0f;
-                break;
             case 1:
+                VerticalInput = 1.0f;
+                break;
+            case 2:
                 VerticalInput = -1.0f;
-                HorizontalInput = 0f;
+             
+              
+                break;
+            case 0:
+                VerticalInput = 0.0f;
+                break;
+        }
+
+        switch ((int)vectorAction[1])
+        {
+            case 1:
+                HorizontalInput = -1.0f;
+               
                 break;
             case 2:
                 HorizontalInput = 1.0f;
-                VerticalInput = 0.0f;
                 break;
-            case 3:
-                HorizontalInput = -1.0f;
-                VerticalInput = 0.0f;
+            case 0:
+                HorizontalInput = 0.0f;
                 break;
-            case 4:
-                VerticalInput = 0.0f;
-                HorizontalInput = 0f;
-                break;
-
-            default:
-                VerticalInput = 0.0f;
-                HorizontalInput = 0f;
-                break;
-
         }
+
+            
+            
+          
 
         float movementX = HorizontalInput * speed;
         float movementY = VerticalInput * speed;
@@ -219,7 +224,7 @@ public class WHDAgent : Agent
 
     private void Update()
     {
-        Debug.Log(transform.position.x);
+//        Debug.Log(transform.position.x);
     }
     // Use this for initialization
     void Start()
