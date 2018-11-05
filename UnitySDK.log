@@ -1,0 +1,17 @@
+11/5/2018 12:22:50 AM
+ 
+Log
+[Firebase Manager] Instance 'Firebase Manager [Singleton] (UnityEngine.GameObject)' was generated in the scene with DontDestroyOnLoad.
+UnityEngine.Debug:Log(Object)
+SimpleFirebaseUnity.FirebaseManager:get_Instance() (at Assets/SimpleFirebaseUnity/Scripts/FirebaseManager.cs:79)
+SimpleFirebaseUnity.FirebaseRoot:StartCoroutine(IEnumerator) (at Assets/SimpleFirebaseUnity/Scripts/FirebaseRoot.cs:131)
+SimpleFirebaseUnity.Firebase:PushJson(String, FirebaseParam) (at Assets/SimpleFirebaseUnity/Scripts/Firebase.cs:692)
+SimpleFirebaseUnity.Firebase:Push(String, Boolean, FirebaseParam) (at Assets/SimpleFirebaseUnity/Scripts/Firebase.cs:731)
+SimpleFirebaseUnity.Firebase:Push(String, Boolean, String) (at Assets/SimpleFirebaseUnity/Scripts/Firebase.cs:716)
+Logger:LogData(WorldHardestGameLogData) (at Assets/Logger.cs:60)
+WHDAgent:AgentReset() (at Assets/Scripts/WHDAgent.cs:44)
+MLAgents.Agent:_AgentReset() (at Assets/ML-Agents/Scripts/Agent.cs:806)
+MLAgents.Academy:ForcedFullReset() (at Assets/ML-Agents/Scripts/Academy.cs:519)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:562)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:610)
+

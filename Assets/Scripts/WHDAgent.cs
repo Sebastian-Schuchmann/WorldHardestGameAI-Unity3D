@@ -4,8 +4,10 @@ using UnityEngine;
 using MLAgents;
 using UnityEngine.UI;
 
-public class WHDAgent : Agent {
-
+public class WHDAgent : Agent
+{
+    public bool LogData = false;
+    public Logger Logger;
     public float viewRadius = 0.0f;
     private const int ENEMY_LAYER = 10;
     private const int GOAL_LAYER = 8;
@@ -19,6 +21,8 @@ public class WHDAgent : Agent {
     private float highestDist = 0.0f;
     private float currentTime = 0.0f;
     public float deathTime = 30.0f;
+
+    public EnemyManager enemyManager;
 
     float HorizontalInput = 0.0f;
     float VerticalInput = 0.0f;
@@ -34,13 +38,21 @@ public class WHDAgent : Agent {
 
     public override void AgentReset()
     {
+        if (LogData)
+        {
+            WorldHardestGameLogData logData = new WorldHardestGameLogData(highestDist, transform.position);
+            Logger.LogData(logData);
+        }
+
         highestDist = 10000.0f;
         currentTime = Time.time + deathTime;
         transform.position = startPosition;
+
     }
 
     public override void CollectObservations()
     {
+        
         Vector2[] rayDirections = {
             Vector2.left,
             Vector2.right,
@@ -50,38 +62,75 @@ public class WHDAgent : Agent {
 
         AddVectorObs(CollectRayInformation());
 
-        AddVectorObs((transform.position.x - startPosition.x)/10.0f);
-        AddVectorObs((transform.position.y - startPosition.y)/10.0f);
+        AddVectorObs((transform.position.x - startPosition.x) / 10.0f);
+        AddVectorObs((transform.position.y - startPosition.y) / 10.0f);
         // Debug.Log(transform.position.x - startPosition.x);
         //Position vom Ziel
         AddVectorObs(Vector2.Distance(transform.position, goalArea.transform.position) / 14.0f);
 
+        //Enemy observation
+        Debug.DrawLine(transform.position, enemyManager.getPositionOfEnemy(2), Color.yellow);
+        AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(0)) / 13.0f);
+        AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(1)) / 13.0f);
+        AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(2)) / 13.0f);
+        AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(3)) / 13.0f);
+        AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(4)) / 13.0f);
+
+        //  Debug.Log("Angle" + Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(2))/ 180f);
+        AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(0)) / 180f);
+        AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(1)) / 180f);
+        AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(2)) / 180f);
+        AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(3)) / 180f);
+        AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(4)) / 180f);
+
+        //  Debug.Log("SPEED" + enemyManager.getSpeedAndDirectionOfEnemy(0));
+        AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(0));
+        AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(1));
+        AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(2));
+        AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(3));
+        AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(4));
+
+
+
+
+        //   Debug.Log("Distance to Enemy: " + Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(2))); //13.0f
+
     }
 
-    public List<float> CollectRayInformation(){
+    public List<float> CollectRayInformation()
+    {
 
         List<float> observations = new List<float>();
         Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
 
         Vector2[] directions = {
             Vector2.left,
-            Vector2.right, 
+            Vector2.right,
             Vector2.up,
             Vector2.down,
             new Vector2(0.5f, 0.5f),
             new Vector2(-0.5f, 0.5f),
             new Vector2(0.5f, -0.5f),
             new Vector2(-0.5f, -0.5f)};
-        Debug.DrawLine(transform.position, goalArea.transform.position, Color.blue);
 
-        LayerMask player = LayerMask.NameToLayer("Wall");
+        // Debug.DrawLine(transform.position, goalArea.transform.position, Color.blue);
 
-        for (int i = 0; i < directions.Length; i++){
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, directions[i]);
+
+
+        // LayerMask player = LayerMask.NameToLayer("Wall");
+
+        LayerMask LayerMask = ~(LayerMask.GetMask("Player") + LayerMask.GetMask("Enemy"));
+        //  LayerMask ^= 1 << (LayerMask.GetMask("Enemy"));
+
+        for (int i = 0; i < directions.Length; i++)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, directions[i], Mathf.Infinity, LayerMask);
             observations.Add(hit.distance);
-            if(hit.collider != null){
-//                Debug.Log(hit.distance);
-//                Debug.DrawLine(transform.position, hit.point, Color.red); 
+            if (hit.collider != null)
+            {
+
+                //                Debug.Log(hit.distance);
+                Debug.DrawLine(transform.position, hit.point, Color.red);
             }
         }
 
@@ -98,16 +147,18 @@ public class WHDAgent : Agent {
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
-        if(currentTime < Time.time){
+        if (currentTime < Time.time)
+        {
             failCounter++;
             //Distanz abhängig?
-            AddReward(-Vector2.Distance(transform.position, goalArea.transform.position)/14.0f);
+            //AddReward(-Vector2.Distance(transform.position, goalArea.transform.position) / 14.0f);
             AgentReset();
         }
-            
-       // playerController.HorizontalInput = vectorAction[0];
-       // playerController.VerticalInput = vectorAction[1];
-        switch((int)vectorAction[0]){
+
+        // playerController.HorizontalInput = vectorAction[0];
+        // playerController.VerticalInput = vectorAction[1];
+        switch ((int)vectorAction[0])
+        {
             case 0:
                 VerticalInput = 1.0f;
                 HorizontalInput = 0f;
@@ -124,11 +175,16 @@ public class WHDAgent : Agent {
                 HorizontalInput = -1.0f;
                 VerticalInput = 0.0f;
                 break;
+            case 4:
+                VerticalInput = 0.0f;
+                HorizontalInput = 0f;
+                break;
+
             default:
                 VerticalInput = 0.0f;
                 HorizontalInput = 0f;
                 break;
-                
+
         }
 
         float movementX = HorizontalInput * speed;
@@ -139,31 +195,32 @@ public class WHDAgent : Agent {
         failCounterText.text = failCounter.ToString();
 
         //Negative Reward for Time
-       // AddReward(-0.01f);
+        AddReward(-0.01f);
 
-        //Reward for moving towards the Goal
-        if (getProgress() > lastProgress + minStepToImprove)
+
+        if (getProgress() > lastProgress)
         {
-            Debug.Log("BAD");
-            AddReward(-0.002f);
             lastProgress = getProgress();
         }
-        else if (getProgress() < highestDist - minStepToImprove)
+        else if (getProgress() < highestDist)
         {
-            Debug.Log("REWARD");
-           AddReward(+0.005f);
             highestDist = getProgress();
             lastProgress = getProgress();
         }
-        else{
+        else
+        {
             lastProgress = getProgress();
         }
 
-    //    Monitor.Log("Reward", );
+      //  Logger.logData.AddProgess(getProgress());
+      
     }
 
 
-
+    private void Update()
+    {
+        Debug.Log(transform.position.x);
+    }
     // Use this for initialization
     void Start()
     {
@@ -171,13 +228,13 @@ public class WHDAgent : Agent {
     }
 
     // Update is called once per frame
-   
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == ENEMY_LAYER)
+        if (collision.gameObject.tag == "Enemy")
         {
-            lastProgress = getProgress();
+            //lastProgress = getProgress();
             Debug.Log("VERY BAD");
             AddReward(-1.0f);
             AgentReset();
@@ -186,7 +243,7 @@ public class WHDAgent : Agent {
 
         if (collision.gameObject.layer == GOAL_LAYER)
         {
-            lastProgress = getProgress();
+          //  lastProgress = getProgress();
             Debug.Log("VERY GOOD");
             //WIN
             failCounter = 0;
@@ -202,7 +259,7 @@ public class WHDAgent : Agent {
     {
         float progress = Vector2.Distance(transform.position, goalArea.GetComponent<Transform>().position);
         //progress -= Vector2.Distance(startPosition, goalArea.GetComponent<Transform>().position);
-//        Debug.Log(progress);
+        //        Debug.Log(progress);
         return progress;
     }
 }
