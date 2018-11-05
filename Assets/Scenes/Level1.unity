@@ -308,7 +308,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.06
+  speed: 0.055
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -645,7 +645,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.06
+  speed: 0.055
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -808,7 +808,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.06
+  speed: 0.055
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -1110,7 +1110,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.06
+  speed: 0.055
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -1782,7 +1782,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.06
+  speed: 0.055
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -2758,7 +2758,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.06
+  speed: 0.055
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -3546,7 +3546,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.06
+  speed: 0.055
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -3784,7 +3784,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.06
+  speed: 0.055
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -4048,7 +4048,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.06
+  speed: 0.055
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
@@ -4211,7 +4211,7 @@ MonoBehaviour:
   LogData: 0
   Logger: {fileID: 9989378}
   viewRadius: 1000
-  speed: 0.06
+  speed: 0.055
   minStepToImprove: 0.02
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
