@@ -155,8 +155,8 @@ public class WHDAgent : Agent
             AgentReset();
         }
 
-       Debug.Log((int)vectorAction[0]);
-        Debug.Log((int)vectorAction[1]);
+        Debug.Log("Action 0:" + (int)vectorAction[0]);
+        Debug.Log("Action 1:" + (int)vectorAction[1]);
         // playerController.HorizontalInput = vectorAction[0];
         // playerController.VerticalInput = vectorAction[1];
         switch ((int)vectorAction[0])

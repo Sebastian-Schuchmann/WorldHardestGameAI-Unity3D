@@ -19,7 +19,7 @@ public class WorldHardestGameLogData
         Death_Position_X = position.x;
         Death_Position_Y = position.y;
         TimeStamp = System.DateTime.Now.ToString();
-        Debug.Log(Death_Position_X + " " +  Death_Position_Y);
+//        Debug.Log(Death_Position_X + " " +  Death_Position_Y);
     }
 
 
