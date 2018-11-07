@@ -12,6 +12,7 @@ public class WorldHardestGameLogData
     public float Death_Position_X;
     public float Death_Position_Y;
     public string TimeStamp;
+    public int ScaledPixelHeight;
 
     public WorldHardestGameLogData(float closest_Distance_To_Goal, Vector3 position)
     {
@@ -19,6 +20,7 @@ public class WorldHardestGameLogData
         Death_Position_X = position.x;
         Death_Position_Y = position.y;
         TimeStamp = System.DateTime.Now.ToString();
+        ScaledPixelHeight = Camera.main.scaledPixelHeight;
 //        Debug.Log(Death_Position_X + " " +  Death_Position_Y);
     }
 
@@ -52,7 +54,7 @@ public class Logger : MonoBehaviour {
     void Start()
     {
         
-        firebase = Firebase.CreateNew("https://basketball-tf.firebaseio.com/");
+        firebase = Firebase.CreateNew("https://whg-ai.firebaseio.com/");
        // logData = new WorldHardestGameLogData();
     }
 

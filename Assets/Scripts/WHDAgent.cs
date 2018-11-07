@@ -69,25 +69,25 @@ public class WHDAgent : Agent
         AddVectorObs(Vector2.Distance(transform.position, goalArea.transform.position) / 14.0f);
 
         //Enemy observation
-        AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(0)) / 13.0f);
-        AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(1)) / 13.0f);
-        AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(2)) / 13.0f);
-        AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(3)) / 13.0f);
-        AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(4)) / 13.0f);
+        //AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(0)) / 13.0f);
+        //AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(1)) / 13.0f);
+        //AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(2)) / 13.0f);
+        //AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(3)) / 13.0f);
+        //AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(4)) / 13.0f);
 
         //  Debug.Log("Angle" + Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(2))/ 180f);
-        AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(0)) / 180f);
-        AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(1)) / 180f);
-        AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(2)) / 180f);
-        AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(3)) / 180f);
-        AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(4)) / 180f);
+        //AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(0)) / 180f);
+        //AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(1)) / 180f);
+        //AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(2)) / 180f);
+        //AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(3)) / 180f);
+        //AddVectorObs(Vector2.Angle(transform.position, enemyManager.getPositionOfEnemy(4)) / 180f);
 
-        //  Debug.Log("SPEED" + enemyManager.getSpeedAndDirectionOfEnemy(0));
-        AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(0));
-        AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(1));
-        AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(2));
-        AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(3));
-        AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(4));
+        ////  Debug.Log("SPEED" + enemyManager.getSpeedAndDirectionOfEnemy(0));
+        //AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(0));
+        //AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(1));
+        //AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(2));
+        //AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(3));
+        //AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(4));
 
     }
 
