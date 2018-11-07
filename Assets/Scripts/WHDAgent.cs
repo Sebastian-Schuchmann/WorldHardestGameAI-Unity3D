@@ -64,12 +64,11 @@ public class WHDAgent : Agent
 
         AddVectorObs((transform.position.x - startPosition.x) / 10.0f);
         AddVectorObs((transform.position.y - startPosition.y) / 10.0f);
-        // Debug.Log(transform.position.x - startPosition.x);
+
         //Position vom Ziel
         AddVectorObs(Vector2.Distance(transform.position, goalArea.transform.position) / 14.0f);
 
         //Enemy observation
-        Debug.DrawLine(transform.position, enemyManager.getPositionOfEnemy(2), Color.yellow);
         AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(0)) / 13.0f);
         AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(1)) / 13.0f);
         AddVectorObs(Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(2)) / 13.0f);
@@ -90,11 +89,6 @@ public class WHDAgent : Agent
         AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(3));
         AddVectorObs(enemyManager.getSpeedAndDirectionOfEnemy(4));
 
-
-
-
-        //   Debug.Log("Distance to Enemy: " + Vector2.Distance(transform.position, enemyManager.getPositionOfEnemy(2))); //13.0f
-
     }
 
     public List<float> CollectRayInformation()
@@ -113,34 +107,18 @@ public class WHDAgent : Agent
             new Vector2(0.5f, -0.5f),
             new Vector2(-0.5f, -0.5f)};
 
-        // Debug.DrawLine(transform.position, goalArea.transform.position, Color.blue);
-
-
-
-        // LayerMask player = LayerMask.NameToLayer("Wall");
-
         LayerMask LayerMask = ~(LayerMask.GetMask("Player") + LayerMask.GetMask("Enemy"));
-        //  LayerMask ^= 1 << (LayerMask.GetMask("Enemy"));
 
         for (int i = 0; i < directions.Length; i++)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, directions[i], Mathf.Infinity, LayerMask);
             observations.Add(hit.distance);
+
             if (hit.collider != null)
             {
-
-                //                Debug.Log(hit.distance);
                 Debug.DrawLine(transform.position, hit.point, Color.red);
             }
         }
-
-        /*RaycastHit2D[] hits = Physics2D.CircleCastAll(currentPosition, viewRadius, direction);
-        foreach(RaycastHit2D hit in hits){
-            Debug.Log(hit.transform.name);
-            //Normalize Value between -1, 1
-            observations.Add((Vector2.Distance(transform.position, hit.point)-viewRadius/2)/8);
-            Debug.DrawLine(currentPosition, hit.point, Color.red);   
-        }*/
 
         return observations;
     }
@@ -150,24 +128,17 @@ public class WHDAgent : Agent
         if (currentTime < Time.time)
         {
             failCounter++;
-            //Distanz abhängig?
-            //AddReward(-Vector2.Distance(transform.position, goalArea.transform.position) / 14.0f);
+            AddReward(-1.0f);
             AgentReset();
         }
 
-        Debug.Log("Action 0:" + (int)vectorAction[0]);
-        Debug.Log("Action 1:" + (int)vectorAction[1]);
-        // playerController.HorizontalInput = vectorAction[0];
-        // playerController.VerticalInput = vectorAction[1];
         switch ((int)vectorAction[0])
         {
             case 1:
                 VerticalInput = 1.0f;
                 break;
             case 2:
-                VerticalInput = -1.0f;
-             
-              
+                VerticalInput = -1.0f;            
                 break;
             case 0:
                 VerticalInput = 0.0f;
@@ -177,8 +148,7 @@ public class WHDAgent : Agent
         switch ((int)vectorAction[1])
         {
             case 1:
-                HorizontalInput = -1.0f;
-               
+                HorizontalInput = -1.0f;               
                 break;
             case 2:
                 HorizontalInput = 1.0f;
@@ -217,30 +187,21 @@ public class WHDAgent : Agent
             lastProgress = getProgress();
         }
 
-      //  Logger.logData.AddProgess(getProgress());
       
     }
 
 
-    private void Update()
-    {
-//        Debug.Log(transform.position.x);
-    }
+
     // Use this for initialization
     void Start()
     {
         startPosition = transform.position;
     }
 
-    // Update is called once per frame
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            //lastProgress = getProgress();
-            Debug.Log("VERY BAD");
             AddReward(-1.0f);
             AgentReset();
             failCounter++;
@@ -248,9 +209,6 @@ public class WHDAgent : Agent
 
         if (collision.gameObject.layer == GOAL_LAYER)
         {
-          //  lastProgress = getProgress();
-            Debug.Log("VERY GOOD");
-            //WIN
             failCounter = 0;
             AddReward(1.0f);
             AgentReset();
