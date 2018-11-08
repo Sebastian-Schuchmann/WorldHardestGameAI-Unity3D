@@ -6,54 +6,30 @@ using System.Linq;
 
 public class WorldHardestGameLogData
 {
- //   public List<float> ProgressInDistanceCollection;
- //   public float Average_Distance_From_Goal;
-    public float Closest_Distance_To_Goal;
-    public float Death_Position_X;
-    public float Death_Position_Y;
-    public string TimeStamp;
+    public float Dist;
+    public float X;
+    public float Y;
 
     public WorldHardestGameLogData(float closest_Distance_To_Goal, Vector3 position)
     {
-        Closest_Distance_To_Goal = closest_Distance_To_Goal;
-        Death_Position_X = position.x;
-        Death_Position_Y = position.y;
-        TimeStamp = System.DateTime.Now.ToString();
-//        Debug.Log(Death_Position_X + " " +  Death_Position_Y);
+        Dist = closest_Distance_To_Goal;
+        //Death Position X&Y
+        X = position.x;
+        Y = position.y;
     }
-
-
-
-    /*  public void calculateAverageProgess(){
-          Average_Distance_From_Goal = ProgressInDistanceCollection.Average();
-          ProgressInDistanceCollection.Clear();
-      }
-
-      public void AddProgess(float Progess){
-          ProgressInDistanceCollection.Add(Progess);
-      }*/
 }
 
 
+//I setup up a Logger for Realtime Database in Firebase to log my Data when
+//training in the cloud. For local training you really dont need this. 
 public class Logger : MonoBehaviour {
 
+    public string fireBaseAdress = "https://whg-ai.firebaseio.com/";
     Firebase firebase;
-   // public WorldHardestGameLogData logData;
-
-
-
-
-    void Update()
-    {
-
-        //LOG DATA
-    }
 
     void Start()
-    {
-        
-        firebase = Firebase.CreateNew("https://basketball-tf.firebaseio.com/");
-       // logData = new WorldHardestGameLogData();
+    {  
+        firebase = Firebase.CreateNew("https://whg-ai.firebaseio.com/");
     }
 
     public void LogData(WorldHardestGameLogData worldHardestGameLog)

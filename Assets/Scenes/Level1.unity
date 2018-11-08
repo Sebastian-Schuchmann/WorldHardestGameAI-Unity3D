@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5eb355dfd3e44c697c717920e9858c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireBaseAdress: https://whg-ai.firebaseio.com/
 --- !u!4 &9989379
 Transform:
   m_ObjectHideFlags: 0
@@ -172,7 +173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &11174412
 Transform:
   m_ObjectHideFlags: 0
@@ -204,16 +205,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &11174414
 Rigidbody2D:
   serializedVersion: 4
@@ -335,7 +334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &14106515
 Transform:
   m_ObjectHideFlags: 0
@@ -367,16 +366,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &14106517
 Rigidbody2D:
   serializedVersion: 4
@@ -498,7 +495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &17611132
 Transform:
   m_ObjectHideFlags: 0
@@ -530,16 +527,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &17611134
 Rigidbody2D:
   serializedVersion: 4
@@ -762,7 +757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &69093679
 Transform:
   m_ObjectHideFlags: 0
@@ -794,16 +789,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &69093681
 Rigidbody2D:
   serializedVersion: 4
@@ -925,7 +918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &82333547
 Transform:
   m_ObjectHideFlags: 0
@@ -957,16 +950,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &82333549
 Rigidbody2D:
   serializedVersion: 4
@@ -1120,16 +1111,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 1
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &128237876
 Rigidbody2D:
   serializedVersion: 4
@@ -1232,6 +1221,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &132153407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e9bda8f3cf1492fa74926a530f6f70, type: 3}
+  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  broadcast: 1
+  keyContinuousPlayerActions: []
+  axisContinuousPlayerActions: []
+  discretePlayerActions:
+  - key: 273
+    branchIndex: 0
+    value: 1
+  - key: 274
+    branchIndex: 0
+    value: 2
+  - key: 0
+    branchIndex: 0
+    value: 0
+  - key: 276
+    branchIndex: 1
+    value: 1
+  - key: 275
+    branchIndex: 1
+    value: 2
+  - key: 0
+    branchIndex: 1
+    value: 0
+  brain: {fileID: 1091509281}
 --- !u!1 &133084872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,7 +1274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &133084873
 Transform:
   m_ObjectHideFlags: 0
@@ -1283,16 +1306,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &133084875
 Rigidbody2D:
   serializedVersion: 4
@@ -1414,7 +1435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &156517786
 Transform:
   m_ObjectHideFlags: 0
@@ -1446,16 +1467,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &156517788
 Rigidbody2D:
   serializedVersion: 4
@@ -1577,7 +1596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &171005742
 Transform:
   m_ObjectHideFlags: 0
@@ -1609,16 +1628,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &171005744
 Rigidbody2D:
   serializedVersion: 4
@@ -1740,7 +1757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &176271706
 Transform:
   m_ObjectHideFlags: 0
@@ -1772,16 +1789,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &176271708
 Rigidbody2D:
   serializedVersion: 4
@@ -1935,16 +1950,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &176336324
 Rigidbody2D:
   serializedVersion: 4
@@ -2167,7 +2180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &256358496
 Transform:
   m_ObjectHideFlags: 0
@@ -2199,16 +2212,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &256358498
 Rigidbody2D:
   serializedVersion: 4
@@ -2330,7 +2341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &306256023
 Transform:
   m_ObjectHideFlags: 0
@@ -2362,16 +2373,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &306256025
 Rigidbody2D:
   serializedVersion: 4
@@ -2525,16 +2534,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &309258391
 Rigidbody2D:
   serializedVersion: 4
@@ -2783,7 +2790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &320261061
 Transform:
   m_ObjectHideFlags: 0
@@ -2815,16 +2822,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &320261063
 Rigidbody2D:
   serializedVersion: 4
@@ -2946,7 +2951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &359927163
 Transform:
   m_ObjectHideFlags: 0
@@ -2978,16 +2983,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &359927165
 Rigidbody2D:
   serializedVersion: 4
@@ -3109,7 +3112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &411753033
 Transform:
   m_ObjectHideFlags: 0
@@ -3141,16 +3144,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &411753035
 Rigidbody2D:
   serializedVersion: 4
@@ -3291,6 +3292,19 @@ Transform:
   m_Father: {fileID: 518664890}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &441832095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943466ab374444748a364f9d6c3e2fe2, type: 3}
+  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  broadcast: 1
+  brain: {fileID: 0}
 --- !u!1 &454955847
 GameObject:
   m_ObjectHideFlags: 0
@@ -3310,7 +3324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &454955848
 Transform:
   m_ObjectHideFlags: 0
@@ -3342,16 +3356,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &454955850
 Rigidbody2D:
   serializedVersion: 4
@@ -3505,16 +3517,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 1
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &469008249
 Rigidbody2D:
   serializedVersion: 4
@@ -3769,16 +3779,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &479883425
 Rigidbody2D:
   serializedVersion: 4
@@ -4149,16 +4157,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &521411779
 Rigidbody2D:
   serializedVersion: 4
@@ -4407,16 +4413,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &525447327
 Rigidbody2D:
   serializedVersion: 4
@@ -4538,7 +4542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &531790753
 Transform:
   m_ObjectHideFlags: 0
@@ -4570,16 +4574,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &531790755
 Rigidbody2D:
   serializedVersion: 4
@@ -4701,7 +4703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &531883475
 Transform:
   m_ObjectHideFlags: 0
@@ -4733,16 +4735,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &531883477
 Rigidbody2D:
   serializedVersion: 4
@@ -4864,7 +4864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &536296353
 Transform:
   m_ObjectHideFlags: 0
@@ -4896,16 +4896,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &536296355
 Rigidbody2D:
   serializedVersion: 4
@@ -5027,7 +5025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &545951249
 Transform:
   m_ObjectHideFlags: 0
@@ -5059,16 +5057,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &545951251
 Rigidbody2D:
   serializedVersion: 4
@@ -5267,7 +5263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &552925605
 Transform:
   m_ObjectHideFlags: 0
@@ -5299,16 +5295,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &552925607
 Rigidbody2D:
   serializedVersion: 4
@@ -5430,7 +5424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &587667692
 Transform:
   m_ObjectHideFlags: 0
@@ -5462,16 +5456,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &587667694
 Rigidbody2D:
   serializedVersion: 4
@@ -5625,16 +5617,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &603300347
 Rigidbody2D:
   serializedVersion: 4
@@ -5857,7 +5847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &662582520
 Transform:
   m_ObjectHideFlags: 0
@@ -5889,16 +5879,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &662582522
 Rigidbody2D:
   serializedVersion: 4
@@ -6020,7 +6008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &667051718
 Transform:
   m_ObjectHideFlags: 0
@@ -6052,16 +6040,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &667051720
 Rigidbody2D:
   serializedVersion: 4
@@ -6183,7 +6169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &675086485
 Transform:
   m_ObjectHideFlags: 0
@@ -6215,16 +6201,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &675086487
 Rigidbody2D:
   serializedVersion: 4
@@ -6346,7 +6330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &702171356
 Transform:
   m_ObjectHideFlags: 0
@@ -6378,16 +6362,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &702171358
 Rigidbody2D:
   serializedVersion: 4
@@ -6560,7 +6542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &722946836
 Transform:
   m_ObjectHideFlags: 0
@@ -6592,16 +6574,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &722946838
 Rigidbody2D:
   serializedVersion: 4
@@ -6723,7 +6703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &730284263
 Transform:
   m_ObjectHideFlags: 0
@@ -6755,16 +6735,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &730284265
 Rigidbody2D:
   serializedVersion: 4
@@ -6886,7 +6864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &750605090
 Transform:
   m_ObjectHideFlags: 0
@@ -6918,16 +6896,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &750605092
 Rigidbody2D:
   serializedVersion: 4
@@ -7183,16 +7159,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 1
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!1 &782701129
 GameObject:
   m_ObjectHideFlags: 0
@@ -7212,7 +7186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &782701130
 Transform:
   m_ObjectHideFlags: 0
@@ -7244,16 +7218,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &782701132
 Rigidbody2D:
   serializedVersion: 4
@@ -7375,7 +7347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &797858477
 Transform:
   m_ObjectHideFlags: 0
@@ -7407,16 +7379,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &797858479
 Rigidbody2D:
   serializedVersion: 4
@@ -7538,7 +7508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &805692965
 Transform:
   m_ObjectHideFlags: 0
@@ -7570,16 +7540,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &805692967
 Rigidbody2D:
   serializedVersion: 4
@@ -7802,7 +7770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &878857499
 Transform:
   m_ObjectHideFlags: 0
@@ -7834,16 +7802,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &878857501
 Rigidbody2D:
   serializedVersion: 4
@@ -7965,7 +7931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &879422597
 Transform:
   m_ObjectHideFlags: 0
@@ -7997,16 +7963,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &879422599
 Rigidbody2D:
   serializedVersion: 4
@@ -8236,7 +8200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &901402146
 Transform:
   m_ObjectHideFlags: 0
@@ -8268,16 +8232,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &901402148
 Rigidbody2D:
   serializedVersion: 4
@@ -8431,16 +8393,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &902780327
 Rigidbody2D:
   serializedVersion: 4
@@ -8562,7 +8522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &910946870
 Transform:
   m_ObjectHideFlags: 0
@@ -8594,16 +8554,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &910946872
 Rigidbody2D:
   serializedVersion: 4
@@ -8725,7 +8683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &923374085
 Transform:
   m_ObjectHideFlags: 0
@@ -8757,16 +8715,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &923374087
 Rigidbody2D:
   serializedVersion: 4
@@ -8888,7 +8844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &923492865
 Transform:
   m_ObjectHideFlags: 0
@@ -8920,16 +8876,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &923492867
 Rigidbody2D:
   serializedVersion: 4
@@ -9051,7 +9005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &925678066
 Transform:
   m_ObjectHideFlags: 0
@@ -9083,16 +9037,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &925678068
 Rigidbody2D:
   serializedVersion: 4
@@ -9246,16 +9198,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 1
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &949473814
 Rigidbody2D:
   serializedVersion: 4
@@ -9377,7 +9327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &961419700
 Transform:
   m_ObjectHideFlags: 0
@@ -9409,16 +9359,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &961419702
 Rigidbody2D:
   serializedVersion: 4
@@ -9572,16 +9520,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &974604887
 Rigidbody2D:
   serializedVersion: 4
@@ -9703,7 +9649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &980145112
 Transform:
   m_ObjectHideFlags: 0
@@ -9735,16 +9681,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &980145114
 Rigidbody2D:
   serializedVersion: 4
@@ -9866,7 +9810,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &981510514
 Transform:
   m_ObjectHideFlags: 0
@@ -9898,16 +9842,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &981510516
 Rigidbody2D:
   serializedVersion: 4
@@ -10029,7 +9971,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1017989942
 Transform:
   m_ObjectHideFlags: 0
@@ -10061,16 +10003,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1017989944
 Rigidbody2D:
   serializedVersion: 4
@@ -10192,7 +10132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1044118892
 Transform:
   m_ObjectHideFlags: 0
@@ -10224,16 +10164,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1044118894
 Rigidbody2D:
   serializedVersion: 4
@@ -10387,16 +10325,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 1
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1058210175
 Rigidbody2D:
   serializedVersion: 4
@@ -10550,16 +10486,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 1
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1071532966
 Rigidbody2D:
   serializedVersion: 4
@@ -10681,7 +10615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1076390585
 Transform:
   m_ObjectHideFlags: 0
@@ -10713,16 +10647,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1076390587
 Rigidbody2D:
   serializedVersion: 4
@@ -10874,13 +10806,13 @@ MonoBehaviour:
     - 
     - 
     vectorActionSpaceType: 0
-  brainType: 2
+  brainType: 0
   CoreBrains:
-  - {fileID: 1428252211}
-  - {fileID: 2072424257}
-  - {fileID: 2102901996}
-  - {fileID: 2039537116}
-  instanceID: 13614
+  - {fileID: 132153407}
+  - {fileID: 441832095}
+  - {fileID: 1426967520}
+  - {fileID: 1166771445}
+  instanceID: 14158
 --- !u!1 &1106966464
 GameObject:
   m_ObjectHideFlags: 0
@@ -11001,7 +10933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1110759632
 Transform:
   m_ObjectHideFlags: 0
@@ -11033,16 +10965,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1110759634
 Rigidbody2D:
   serializedVersion: 4
@@ -11164,7 +11094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1113839951
 Transform:
   m_ObjectHideFlags: 0
@@ -11196,16 +11126,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1113839953
 Rigidbody2D:
   serializedVersion: 4
@@ -11327,7 +11255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1124842613
 Transform:
   m_ObjectHideFlags: 0
@@ -11359,16 +11287,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1124842615
 Rigidbody2D:
   serializedVersion: 4
@@ -11490,7 +11416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1131815321
 Transform:
   m_ObjectHideFlags: 0
@@ -11522,16 +11448,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1131815323
 Rigidbody2D:
   serializedVersion: 4
@@ -11653,7 +11577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1140401728
 Transform:
   m_ObjectHideFlags: 0
@@ -11685,16 +11609,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1140401730
 Rigidbody2D:
   serializedVersion: 4
@@ -11797,6 +11719,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1166771445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
+  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  broadcast: 1
+  graphModel: {fileID: 0}
+  graphScope: 
+  graphPlaceholders: []
+  BatchSizePlaceholderName: batch_size
+  VectorObservationPlacholderName: vector_observation
+  RecurrentInPlaceholderName: recurrent_in
+  RecurrentOutPlaceholderName: recurrent_out
+  VisualObservationPlaceholderName: []
+  ActionPlaceholderName: action
+  PreviousActionPlaceholderName: prev_action
+  brain: {fileID: 0}
 --- !u!1 &1172933769
 GameObject:
   m_ObjectHideFlags: 0
@@ -12018,7 +11963,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1201050168
 Transform:
   m_ObjectHideFlags: 0
@@ -12050,16 +11995,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1201050170
 Rigidbody2D:
   serializedVersion: 4
@@ -12181,7 +12124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1208494858
 Transform:
   m_ObjectHideFlags: 0
@@ -12213,16 +12156,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1208494860
 Rigidbody2D:
   serializedVersion: 4
@@ -12344,7 +12285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1241017638
 Transform:
   m_ObjectHideFlags: 0
@@ -12376,16 +12317,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1241017640
 Rigidbody2D:
   serializedVersion: 4
@@ -12507,7 +12446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1270633217
 Transform:
   m_ObjectHideFlags: 0
@@ -12539,16 +12478,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1270633219
 Rigidbody2D:
   serializedVersion: 4
@@ -12771,7 +12708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1332703374
 Transform:
   m_ObjectHideFlags: 0
@@ -12803,16 +12740,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1332703376
 Rigidbody2D:
   serializedVersion: 4
@@ -12934,7 +12869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1342190196
 Transform:
   m_ObjectHideFlags: 0
@@ -12966,16 +12901,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1342190198
 Rigidbody2D:
   serializedVersion: 4
@@ -13129,16 +13062,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1350577515
 Rigidbody2D:
   serializedVersion: 4
@@ -13260,7 +13191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1386331276
 Transform:
   m_ObjectHideFlags: 0
@@ -13292,16 +13223,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1386331278
 Rigidbody2D:
   serializedVersion: 4
@@ -13423,7 +13352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1388072572
 Transform:
   m_ObjectHideFlags: 0
@@ -13455,16 +13384,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1388072574
 Rigidbody2D:
   serializedVersion: 4
@@ -13567,7 +13494,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1428252211
+--- !u!114 &1426967520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13575,31 +13502,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e9bda8f3cf1492fa74926a530f6f70, type: 3}
-  m_Name: (Clone)(Clone)(Clone)
+  m_Script: {fileID: 11500000, guid: 35813a1be64e144f887d7d5f15b963fa, type: 3}
+  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  broadcast: 1
-  keyContinuousPlayerActions: []
-  axisContinuousPlayerActions: []
-  discretePlayerActions:
-  - key: 273
-    branchIndex: 0
-    value: 1
-  - key: 274
-    branchIndex: 0
-    value: 2
-  - key: 0
-    branchIndex: 0
-    value: 0
-  - key: 276
-    branchIndex: 1
-    value: 1
-  - key: 275
-    branchIndex: 1
-    value: 2
-  - key: 0
-    branchIndex: 1
-    value: 0
   brain: {fileID: 1091509281}
 --- !u!1 &1431185569
 GameObject:
@@ -13760,16 +13665,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 1
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1431338914
 Rigidbody2D:
   serializedVersion: 4
@@ -13992,7 +13895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1446645002
 Transform:
   m_ObjectHideFlags: 0
@@ -14024,16 +13927,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1446645004
 Rigidbody2D:
   serializedVersion: 4
@@ -14155,7 +14056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1447609773
 Transform:
   m_ObjectHideFlags: 0
@@ -14187,16 +14088,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1447609775
 Rigidbody2D:
   serializedVersion: 4
@@ -14331,7 +14230,7 @@ MonoBehaviour:
     width: 201
     height: 126
     qualityLevel: 0
-    timeScale: 3
+    timeScale: 100
     targetFrameRate: 60
   inferenceConfiguration:
     width: 1280
@@ -14374,7 +14273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1456966367
 Transform:
   m_ObjectHideFlags: 0
@@ -14406,16 +14305,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1456966369
 Rigidbody2D:
   serializedVersion: 4
@@ -14569,16 +14466,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1467695515
 Rigidbody2D:
   serializedVersion: 4
@@ -14700,7 +14595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1470626534
 Transform:
   m_ObjectHideFlags: 0
@@ -14732,16 +14627,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1470626536
 Rigidbody2D:
   serializedVersion: 4
@@ -14863,7 +14756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1478315793
 Transform:
   m_ObjectHideFlags: 0
@@ -14895,16 +14788,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1478315795
 Rigidbody2D:
   serializedVersion: 4
@@ -15026,7 +14917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1521330372
 Transform:
   m_ObjectHideFlags: 0
@@ -15058,16 +14949,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1521330374
 Rigidbody2D:
   serializedVersion: 4
@@ -15202,7 +15091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19000001, y: 0.096}
   m_AnchorMax: {x: 0.73800004, y: 0.88400006}
-  m_AnchoredPosition: {x: 570.3777, y: 100.99992}
+  m_AnchoredPosition: {x: 570.3777, y: 100.99994}
   m_SizeDelta: {x: 94.899994, y: -32.899994}
   m_Pivot: {x: -1.7392265, y: -0.00000009541645}
 --- !u!114 &1531808387
@@ -15374,7 +15263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1544214733
 Transform:
   m_ObjectHideFlags: 0
@@ -15406,16 +15295,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1544214735
 Rigidbody2D:
   serializedVersion: 4
@@ -15537,7 +15424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1545623288
 Transform:
   m_ObjectHideFlags: 0
@@ -15569,16 +15456,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1545623290
 Rigidbody2D:
   serializedVersion: 4
@@ -15700,7 +15585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1570731663
 Transform:
   m_ObjectHideFlags: 0
@@ -15732,16 +15617,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1570731665
 Rigidbody2D:
   serializedVersion: 4
@@ -15863,7 +15746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1619299033
 Transform:
   m_ObjectHideFlags: 0
@@ -15895,16 +15778,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1619299035
 Rigidbody2D:
   serializedVersion: 4
@@ -16202,7 +16083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1765836852
 Transform:
   m_ObjectHideFlags: 0
@@ -16234,16 +16115,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1765836854
 Rigidbody2D:
   serializedVersion: 4
@@ -16365,7 +16244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1811860643
 Transform:
   m_ObjectHideFlags: 0
@@ -16397,16 +16276,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1811860645
 Rigidbody2D:
   serializedVersion: 4
@@ -16560,16 +16437,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 1
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1855806016
 Rigidbody2D:
   serializedVersion: 4
@@ -16691,7 +16566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1909957979
 Transform:
   m_ObjectHideFlags: 0
@@ -16723,16 +16598,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1909957981
 Rigidbody2D:
   serializedVersion: 4
@@ -16854,7 +16727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1910249617
 Transform:
   m_ObjectHideFlags: 0
@@ -16886,16 +16759,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1910249619
 Rigidbody2D:
   serializedVersion: 4
@@ -17017,7 +16888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1912613921
 Transform:
   m_ObjectHideFlags: 0
@@ -17049,16 +16920,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1912613923
 Rigidbody2D:
   serializedVersion: 4
@@ -17180,7 +17049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1917136763
 Transform:
   m_ObjectHideFlags: 0
@@ -17212,16 +17081,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1917136765
 Rigidbody2D:
   serializedVersion: 4
@@ -17375,16 +17242,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 1
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1918748273
 Rigidbody2D:
   serializedVersion: 4
@@ -17538,16 +17403,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 1
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1919917227
 Rigidbody2D:
   serializedVersion: 4
@@ -17701,16 +17564,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 1
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1960609151
 Rigidbody2D:
   serializedVersion: 4
@@ -17832,7 +17693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1987341451
 Transform:
   m_ObjectHideFlags: 0
@@ -17864,16 +17725,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1987341453
 Rigidbody2D:
   serializedVersion: 4
@@ -17995,7 +17854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1994189650
 Transform:
   m_ObjectHideFlags: 0
@@ -18027,16 +17886,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &1994189652
 Rigidbody2D:
   serializedVersion: 4
@@ -18139,29 +17996,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2039537116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
-  m_Name: (Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  graphModel: {fileID: 0}
-  graphScope: 
-  graphPlaceholders: []
-  BatchSizePlaceholderName: batch_size
-  VectorObservationPlacholderName: vector_observation
-  RecurrentInPlaceholderName: recurrent_in
-  RecurrentOutPlaceholderName: recurrent_out
-  VisualObservationPlaceholderName: []
-  ActionPlaceholderName: action
-  PreviousActionPlaceholderName: prev_action
-  brain: {fileID: 0}
 --- !u!1 &2051006801
 GameObject:
   m_ObjectHideFlags: 0
@@ -18181,7 +18015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2051006802
 Transform:
   m_ObjectHideFlags: 0
@@ -18213,16 +18047,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &2051006804
 Rigidbody2D:
   serializedVersion: 4
@@ -18344,7 +18176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2053876350
 Transform:
   m_ObjectHideFlags: 0
@@ -18376,16 +18208,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &2053876352
 Rigidbody2D:
   serializedVersion: 4
@@ -18488,31 +18318,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2072424257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 943466ab374444748a364f9d6c3e2fe2, type: 3}
-  m_Name: (Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  brain: {fileID: 0}
---- !u!114 &2102901996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35813a1be64e144f887d7d5f15b963fa, type: 3}
-  m_Name: (Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  brain: {fileID: 1091509281}
 --- !u!1 &2140151949
 GameObject:
   m_ObjectHideFlags: 0
@@ -18532,7 +18337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2140151950
 Transform:
   m_ObjectHideFlags: 0
@@ -18564,16 +18369,14 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  LogData: 0
+  LogDataToFirebase: 0
   Logger: {fileID: 9989378}
-  viewRadius: 1000
   speed: 0.055
-  minStepToImprove: 0.02
+  timeToDie: 30
+  goalArea: {fileID: 36296767}
+  enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
-  goalArea: {fileID: 36296767}
-  deathTime: 45
-  enemyManager: {fileID: 707531577}
 --- !u!50 &2140151952
 Rigidbody2D:
   serializedVersion: 4

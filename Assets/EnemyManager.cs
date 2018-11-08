@@ -5,21 +5,17 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour {
 
     public EnemyController[] enemies;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-    public Vector3 getPositionOfEnemy(int index){
+    public int GetLength(){
+        return enemies.Length;
+    }
+
+    public Vector3 GetPositionOfEnemy(int index){
         return enemies[index].transform.position;
     }
 
-    public float getSpeedAndDirectionOfEnemy(int index){
-        return enemies[index].GetComponent<EnemyController>().currentDirection.x * enemies[index].GetComponent<EnemyController>().speed;
+
+    public float GetSpeedAndDirectionOfEnemy(int index){
+        return enemies[index].GetComponent<EnemyController>().GetCurrentDirection().x * enemies[index].GetComponent<EnemyController>().speed;
     }
 }
