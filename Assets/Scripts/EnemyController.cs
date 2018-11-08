@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
 {
     [Header("Settings")]
     public MovementDirection movementDirection;
+    public bool useLocalPosition;
     public float speed = 0.129f;
     //LEFT AND RIGHT
     public float minX = -3.76f;
@@ -46,20 +47,30 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
+        float x;
+        float y;
+
+        if(useLocalPosition){
+            x = transform.localPosition.x;
+            y = transform.localPosition.y;
+        } else{
+            x = transform.position.x;
+            y = transform.position.y;
+        }
+            
         if (movementDirection == MovementDirection.left || movementDirection == MovementDirection.right)
         {
-            if (transform.position.x < minX)
+            if (x < minX)
                 SwitchDirection();
-            if (transform.position.x > maxX)
+            if (x > maxX)
                 SwitchDirection();
         }
 
         if (movementDirection == MovementDirection.up || movementDirection == MovementDirection.down)
         {
-            if (transform.position.y < minY)
-                
+            if (y < minY)
                 SwitchDirection();
-            if (transform.position.y > maxY)
+            if (y > maxY)
                 SwitchDirection();
         }
         

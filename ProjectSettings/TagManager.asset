@@ -7,6 +7,10 @@ TagManager:
   - Goal
   - Wall
   - Enemy
+  - LEVEL13
+  - LEVEL15
+  - LEVEL10
+  - LEVEL1
   layers:
   - Default
   - TransparentFX

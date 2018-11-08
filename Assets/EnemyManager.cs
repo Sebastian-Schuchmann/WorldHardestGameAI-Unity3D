@@ -11,7 +11,7 @@ public class EnemyManager : MonoBehaviour {
     }
 
     public Vector3 GetPositionOfEnemy(int index){
-        return enemies[index].transform.position;
+        return enemies[index].transform.localPosition;
     }
 
 

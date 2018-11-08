@@ -15,6 +15,8 @@ public class WHDAgent : Agent
     public float speed = 0.055f; //0.055 is as close to the original speed I could get, should be pretty accurate
     [Range(1.0f, 120.0f)]
     public float timeToDie = 30.0f;
+    public bool trainWithCamera;
+    public bool debugMode;
 
     [Header("References")]
     public GameObject goalArea;
@@ -70,17 +72,19 @@ public class WHDAgent : Agent
     {
         AddVectorObs(CollectRayInformation());
 
-        AddVectorObs((transform.position.x) / 14.0f);
-        AddVectorObs((transform.position.y) / 14.0f);
+        AddVectorObs((transform.localPosition.x) / 14.0f);
+        AddVectorObs((transform.localPosition.y) / 14.0f);
 
         //Distance to goal
-        AddVectorObs(Vector2.Distance(transform.position, goalArea.transform.position) / 14.0f);
+        AddVectorObs(Vector2.Distance(transform.localPosition, goalArea.transform.localPosition) / 14.0f);
 
-        //Enemy observation (Distance, Angle, Speed
-        for (int i = 0; i < enemyManager.GetLength(); i++){
-            AddVectorObs(Vector2.Distance(transform.position, enemyManager.GetPositionOfEnemy(i)) / 13.0f);
-            AddVectorObs(Vector2.Angle(transform.position, enemyManager.GetPositionOfEnemy(i)) / 180f);
-            AddVectorObs(enemyManager.GetSpeedAndDirectionOfEnemy(i));        
+        if(!trainWithCamera){
+            //Enemy observation (Distance, Angle, Speed
+            for (int i = 0; i < enemyManager.GetLength(); i++){
+                AddVectorObs(Vector2.Distance(transform.position, enemyManager.GetPositionOfEnemy(i)) / 13.0f);
+                AddVectorObs(Vector2.Angle(transform.position, enemyManager.GetPositionOfEnemy(i)) / 180f);
+                AddVectorObs(enemyManager.GetSpeedAndDirectionOfEnemy(i));        
+            }
         }
     }
 
@@ -93,6 +97,8 @@ public class WHDAgent : Agent
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, directions[i], Mathf.Infinity, rayObservationMask);
             observations[i] = hit.distance;
+            if(debugMode)
+            Debug.DrawLine(transform.position, new Vector3(hit.point.x, hit.point.y, 0));
         }
 
         return observations;
