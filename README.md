@@ -4,6 +4,7 @@ Made with Unity 2018.2.3f1 and [ML-Agents Beta 0.5.0a](https://github.com/Unity-
 
 If you like this repo make sure to follow me [@seppischuchmann](https://www.instagram.com/seppischuchmann/) 👋.
 
+![](https://media.giphy.com/media/5Yt3TNolfTA1y6kGtl/giphy.gif)
 ## Getting started
 ### Installing ML Agents and Tensorflow
 1. First download [ML-Agents Beta 0.5.0a](https://github.com/Unity-Technologies/ml-agents/releases/tag/0.5.0a) and import the ML-Agents folder (.../ml-agents-0.5.0a/UnitySDK/Assets/) into the projects asset folder.
