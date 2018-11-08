@@ -114,7 +114,7 @@ public class WHDAgent : Agent
         }
 
         //Negative Reward for Time
-        AddReward(-0.01f);
+        AddReward(-0.01f/timeToDie);
 
         float HorizontalInput = 0.0f, VerticalInput = 0.0f;
 
