@@ -4555,7 +4555,7 @@ MonoBehaviour:
   speed: 0.055
   timeToDie: 90
   trainWithCamera: 1
-  debugMode: 1
+  debugMode: 0
   goalArea: {fileID: 1867580734}
   enemyManager: {fileID: 1415094061}
   progressText: {fileID: 552010234}
@@ -5392,7 +5392,7 @@ MonoBehaviour:
   speed: 0.055
   timeToDie: 30
   trainWithCamera: 1
-  debugMode: 1
+  debugMode: 0
   goalArea: {fileID: 36296767}
   enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
@@ -6308,7 +6308,7 @@ MonoBehaviour:
   speed: 0.055
   timeToDie: 120
   trainWithCamera: 1
-  debugMode: 1
+  debugMode: 0
   goalArea: {fileID: 58738450}
   enemyManager: {fileID: 240218479}
   progressText: {fileID: 552010234}
@@ -9991,7 +9991,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19000001, y: 0.096}
   m_AnchorMax: {x: 0.73800004, y: 0.88400006}
-  m_AnchoredPosition: {x: 570.37756, y: 100.99984}
+  m_AnchoredPosition: {x: 570.37756, y: 100.99985}
   m_SizeDelta: {x: 94.899994, y: -32.899994}
   m_Pivot: {x: -1.7392265, y: -0.00000009541645}
 --- !u!114 &1531808387
@@ -12146,7 +12146,7 @@ MonoBehaviour:
   speed: 0.055
   timeToDie: 40
   trainWithCamera: 1
-  debugMode: 1
+  debugMode: 0
   goalArea: {fileID: 527939477}
   enemyManager: {fileID: 1488523560}
   progressText: {fileID: 552010234}
