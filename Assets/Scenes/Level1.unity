@@ -3740,7 +3740,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.175
 --- !u!114 &498928689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3756,6 +3756,8 @@ MonoBehaviour:
   speed: 0.129
   minX: -3.76
   maxX: 3.76
+  minY: -3.76
+  maxY: 3.76
 --- !u!1 &518664889
 GameObject:
   m_ObjectHideFlags: 0
@@ -7659,7 +7661,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.175
 --- !u!114 &895425175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7675,6 +7677,8 @@ MonoBehaviour:
   speed: 0.129
   minX: -3.76
   maxX: 3.76
+  minY: -3.76
+  maxY: 3.76
 --- !u!1 &901402145
 GameObject:
   m_ObjectHideFlags: 0
@@ -12731,7 +12735,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.175
 --- !u!114 &1431185574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12747,6 +12751,8 @@ MonoBehaviour:
   speed: 0.129
   minX: -3.76
   maxX: 3.76
+  minY: -3.76
+  maxY: 3.76
 --- !u!1 &1431338911
 GameObject:
   m_ObjectHideFlags: 0
@@ -14128,7 +14134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19000001, y: 0.096}
   m_AnchorMax: {x: 0.73800004, y: 0.88400006}
-  m_AnchoredPosition: {x: 570.3777, y: 100.999954}
+  m_AnchoredPosition: {x: 570.37756, y: 100.99994}
   m_SizeDelta: {x: 94.899994, y: -32.899994}
   m_Pivot: {x: -1.7392265, y: -0.00000009541645}
 --- !u!114 &1531808387
@@ -14264,7 +14270,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.175
 --- !u!114 &1536108244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14280,6 +14286,8 @@ MonoBehaviour:
   speed: 0.129
   minX: -3.76
   maxX: 3.76
+  minY: -3.76
+  maxY: 3.76
 --- !u!1 &1544214732
 GameObject:
   m_ObjectHideFlags: 0
@@ -17378,7 +17386,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.175
 --- !u!114 &2141192874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17394,3 +17402,5 @@ MonoBehaviour:
   speed: 0.129
   minX: -3.76
   maxX: 3.76
+  minY: -3.76
+  maxY: 3.76
