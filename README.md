@@ -15,3 +15,8 @@ If you like this repo make sure to follow me [@seppischuchmann](https://www.inst
 
 If you need more guidance check out the [basic guide](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Basic-Guide.md).
 
+### Open the Scene
+1. Start the MASTER Scene.
+2. Make sure the Brain is set to external.
+3. You can now start training
+
