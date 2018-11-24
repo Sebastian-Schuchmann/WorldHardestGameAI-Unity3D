@@ -5,8 +5,10 @@ using MLAgents;
 using UnityEngine.UI;
 using System;
 
-public class WHDAgent : Agent
+public class WHDAgent : MonoBehaviour
 {
+    public event System.Action dying;
+
     [Header("Data Logging")]
     public bool LogDataToFirebase;
     public Logger Logger;
@@ -23,6 +25,10 @@ public class WHDAgent : Agent
     public EnemyManager enemyManager;
     public Text progressText;
     public Text failCounterText;
+
+    double[] CurrentInputs;
+
+    public bool moveEnabled = true;
 
     int failCounter;
     float lastProgress;
@@ -43,7 +49,7 @@ public class WHDAgent : Agent
     LayerMask rayObservationMask;
 
 
-    public override void InitializeAgent()
+/*    public override void InitializeAgent()
     {
         timeToLive = timeToDie;
         highestDist = GetProgress();
@@ -54,38 +60,44 @@ public class WHDAgent : Agent
         //They are just used to detect walls
         rayObservationMask = ~(LayerMask.GetMask("Player") + LayerMask.GetMask("Enemy"));
     }
+*/
 
-    public override void AgentReset()
+    public void AgentReset()
     {
-        if (LogDataToFirebase)
-        {
-            WorldHardestGameLogData logData = new WorldHardestGameLogData(highestDist, transform.position);
-            Logger.LogData(logData);
-        }
-
+        dying();
         highestDist = 10000.0f;
         timeToLive = Time.time + timeToDie;
         transform.position = startPosition;
     }
 
-    public override void CollectObservations()
+    internal void start()
     {
-        AddVectorObs(CollectRayInformation());
+        moveEnabled = true;
+    }
 
-        AddVectorObs((transform.localPosition.x) / 14.0f);
-        AddVectorObs((transform.localPosition.y) / 14.0f);
+    /*
+public override void CollectObservations()
+{
+   AddVectorObs(CollectRayInformation());
 
-        //Distance to goal
-        AddVectorObs(Vector2.Distance(transform.localPosition, goalArea.transform.localPosition) / 14.0f);
+   AddVectorObs((transform.localPosition.x) / 14.0f);
+   AddVectorObs((transform.localPosition.y) / 14.0f);
 
-        if(!trainWithCamera){
-            //Enemy observation (Distance, Angle, Speed
-            for (int i = 0; i < enemyManager.GetLength(); i++){
-                AddVectorObs(Vector2.Distance(transform.position, enemyManager.GetPositionOfEnemy(i)) / 13.0f);
-                AddVectorObs(Vector2.Angle(transform.position, enemyManager.GetPositionOfEnemy(i)) / 180f);
-                AddVectorObs(enemyManager.GetSpeedAndDirectionOfEnemy(i));        
-            }
-        }
+   //Distance to goal
+   AddVectorObs(Vector2.Distance(transform.localPosition, goalArea.transform.localPosition) / 14.0f);
+
+   if(!trainWithCamera){
+       //Enemy observation (Distance, Angle, Speed
+       for (int i = 0; i < enemyManager.GetLength(); i++){
+           AddVectorObs(Vector2.Distance(transform.position, enemyManager.GetPositionOfEnemy(i)) / 13.0f);
+           AddVectorObs(Vector2.Angle(transform.position, enemyManager.GetPositionOfEnemy(i)) / 180f);
+           AddVectorObs(enemyManager.GetSpeedAndDirectionOfEnemy(i));        
+       }
+   }
+}
+*/
+    public void Stop(){
+        moveEnabled = false;
     }
 
     //Shots out rays and collects distance to the hit points
@@ -95,62 +107,46 @@ public class WHDAgent : Agent
 
         for (int i = 0; i < directions.Length; i++)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, directions[i], Mathf.Infinity, rayObservationMask);
-            observations[i] = hit.distance;
-            if(debugMode)
-            Debug.DrawLine(transform.position, new Vector3(hit.point.x, hit.point.y, 0));
+        //    RaycastHit2D hit = Physics2D.Raycast(transform.position, directions[i], Mathf.Infinity, rayObservationMask);
+        //    observations[i] = hit.distance;
+        //    if(debugMode)
+        //    Debug.DrawLine(transform.position, new Vector3(hit.point.x, hit.point.y, 0));
+        //
         }
 
         return observations;
     }
 
-    public override void AgentAction(float[] vectorAction, string textAction)
+    public double[] getCurrentInputs(){
+        return CurrentInputs;
+    }
+
+    public void SetInputs(double[] input)
     {
-        if (timeToLive < Time.time)
-        {
-            failCounter++;
-            AddReward(-1.0f);
-            AgentReset();
+        if(moveEnabled){
+
+            //if (timeToLive < Time.time)
+            //{
+            //    failCounter++;
+            //    AddReward(-1.0f);
+            //    AgentReset();
+            //}
+            
+            ////Negative Reward for Time
+            //AddReward(-0.01f/timeToDie);
+            CurrentInputs = input;
+            
+            double HorizontalInput = input[0];
+            double VerticalInput = input[1];
+            
+            //Apply movement
+            double movementX = HorizontalInput * speed;
+            double movementY = VerticalInput * speed;
+            transform.position = transform.position + new Vector3((float)movementX, (float)movementY, 0);
+            
+            //Update last Progress and highest Distance
+            UpdateProgress();
         }
-
-        //Negative Reward for Time
-        AddReward(-0.01f/timeToDie);
-
-        float HorizontalInput = 0.0f, VerticalInput = 0.0f;
-
-        switch ((int)vectorAction[0])
-        {
-            case 1:
-                VerticalInput = 1.0f;
-                break;
-            case 2:
-                VerticalInput = -1.0f;            
-                break;
-            case 0:
-                VerticalInput = 0.0f;
-                break;
-        }
-
-        switch ((int)vectorAction[1])
-        {
-            case 1:
-                HorizontalInput = -1.0f;               
-                break;
-            case 2:
-                HorizontalInput = 1.0f;
-                break;
-            case 0:
-                HorizontalInput = 0.0f;
-                break;
-        }
-
-        //Apply movement
-        float movementX = HorizontalInput * speed;
-        float movementY = VerticalInput * speed;
-        transform.position = transform.position + new Vector3(movementX, movementY, 0);
-
-        //Update last Progress and highest Distance
-        UpdateProgress();
     }
 
     void UpdateProgress()
@@ -169,14 +165,14 @@ public class WHDAgent : Agent
             lastProgress = GetProgress();
         }
 
-        failCounterText.text = failCounter.ToString();
+//        failCounterText.text = failCounter.ToString();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            AddReward(-1.0f);
+          //  AddReward(-1.0f);
             AgentReset();
             failCounter++;
         }
@@ -184,13 +180,14 @@ public class WHDAgent : Agent
         if (collision.gameObject.layer == LayerMask.NameToLayer("Goal"))
         {
             failCounter = 0;
-            AddReward(1.0f);
+         //   AddReward(1.0f);
             AgentReset();
         }
     }
 
     public float GetProgress()
     {
-        return Vector2.Distance(transform.position, goalArea.transform.position);
+        return 0.0f;
+       // return Vector2.Distance(transform.position, goalArea.transform.position);
     }
 }
