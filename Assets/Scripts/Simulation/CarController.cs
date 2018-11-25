@@ -102,7 +102,7 @@ public class CarController : MonoBehaviour
     {
         
         Movement.enabled = true;
-        Movement.start();
+        Movement.restart();
         timeSinceLastCheckpoint = 0;
 
         foreach (Sensor s in sensors)

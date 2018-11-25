@@ -49,8 +49,8 @@ public class WHDAgent : MonoBehaviour
     LayerMask rayObservationMask;
 
 
-/*    public override void InitializeAgent()
-    {
+   public void Awake()
+  {
         timeToLive = timeToDie;
         highestDist = GetProgress();
 
@@ -58,19 +58,23 @@ public class WHDAgent : MonoBehaviour
 
         //The raycast used in observations shouldnt hit the player or enemies
         //They are just used to detect walls
-        rayObservationMask = ~(LayerMask.GetMask("Player") + LayerMask.GetMask("Enemy"));
+        rayObservationMask = ~(LayerMask.GetMask("Player"));
     }
-*/
+
 
     public void AgentReset()
     {
         dying();
         highestDist = 10000.0f;
         timeToLive = Time.time + timeToDie;
-        transform.position = startPosition;
+        resetPosition();
     }
 
-    internal void start()
+    public void resetPosition(){
+        transform.position = startPosition;  
+    }
+
+    public void restart()
     {
         moveEnabled = true;
     }
@@ -79,15 +83,15 @@ public class WHDAgent : MonoBehaviour
     public double[] CollectObservations()
 {
         
-        double[] obs = new double[3];
+        double[] obs = new double[11];
         obs[0] = transform.localPosition.x / 14.0f;
         obs[1] = transform.localPosition.y / 14.0f;
         obs[2] = Vector2.Distance(transform.localPosition, goalArea.transform.localPosition) / 14.0f;
 
-       /* double[] rays = CollectRayInformation();
+        double[] rays = CollectRayInformation();
         for (int i = 3; i < 11; i++){
-            obs[i] = rays[i - 3];
-        }*/
+           obs[i] = rays[i - 3];
+        }
         return obs;
 }
 
@@ -102,10 +106,10 @@ public class WHDAgent : MonoBehaviour
 
         for (int i = 0; i < directions.Length; i++)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, directions[i], Mathf.Infinity);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, directions[i], Mathf.Infinity, rayObservationMask);
             observations[i] = hit.distance;
-            Debug.Log("Hitpoint!" + hit.point.x);
-            Debug.DrawLine(transform.position, new Vector3(hit.point.x, hit.point.y, 0 ), Color.blue);
+           // Debug.Log("Hitpoint!" + hit.point.x);
+          //  Debug.DrawLine(transform.position, new Vector3(hit.point.x, hit.point.y, 0 ), Color.blue);
         
         }
 

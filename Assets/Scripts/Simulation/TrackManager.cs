@@ -20,7 +20,6 @@ public class TrackManager : MonoBehaviour
     }
 
 
-    private Checkpoint[] checkpoints;
 
     /// <summary>
     /// Car used to create new cars and to set start position.
@@ -133,8 +132,7 @@ public class TrackManager : MonoBehaviour
         Instance = this;
 
         //Get all checkpoints
-        checkpoints = GetComponentsInChildren<Checkpoint>();
-
+       
         //Set start position and hide prototype
         startPosition = PrototypeCar.transform.position;
         startRotation = PrototypeCar.transform.rotation;
@@ -145,9 +143,7 @@ public class TrackManager : MonoBehaviour
 
     void Start()
     {
-        //Hide checkpoints
-        foreach (Checkpoint check in checkpoints)
-            check.IsVisible = false;
+
     }
     #endregion
 
@@ -212,8 +208,7 @@ public class TrackManager : MonoBehaviour
     {
         foreach (RaceCar car in cars)
         {
-            car.Car.transform.position = startPosition;
-            car.Car.transform.rotation = startRotation;
+            car.Car.Movement.resetPosition();
             car.Car.Restart();
             car.CheckpointIndex = 1;
         }
