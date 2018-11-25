@@ -144,7 +144,7 @@ public class Genotype : IComparable<Genotype>, IEnumerable<float>
 
         builder.Remove(builder.Length - 1, 1);
 
-        File.WriteAllText(filePath, builder.ToString());
+        //File.WriteAllText(filePath, builder.ToString());
     }
 
     #region Static Methods

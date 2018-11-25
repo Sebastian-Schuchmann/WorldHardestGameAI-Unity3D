@@ -75,43 +75,38 @@ public class WHDAgent : MonoBehaviour
         moveEnabled = true;
     }
 
-    /*
-public override void CollectObservations()
+
+    public double[] CollectObservations()
 {
-   AddVectorObs(CollectRayInformation());
+        
+        double[] obs = new double[3];
+        obs[0] = transform.localPosition.x / 14.0f;
+        obs[1] = transform.localPosition.y / 14.0f;
+        obs[2] = Vector2.Distance(transform.localPosition, goalArea.transform.localPosition) / 14.0f;
 
-   AddVectorObs((transform.localPosition.x) / 14.0f);
-   AddVectorObs((transform.localPosition.y) / 14.0f);
-
-   //Distance to goal
-   AddVectorObs(Vector2.Distance(transform.localPosition, goalArea.transform.localPosition) / 14.0f);
-
-   if(!trainWithCamera){
-       //Enemy observation (Distance, Angle, Speed
-       for (int i = 0; i < enemyManager.GetLength(); i++){
-           AddVectorObs(Vector2.Distance(transform.position, enemyManager.GetPositionOfEnemy(i)) / 13.0f);
-           AddVectorObs(Vector2.Angle(transform.position, enemyManager.GetPositionOfEnemy(i)) / 180f);
-           AddVectorObs(enemyManager.GetSpeedAndDirectionOfEnemy(i));        
-       }
-   }
+       /* double[] rays = CollectRayInformation();
+        for (int i = 3; i < 11; i++){
+            obs[i] = rays[i - 3];
+        }*/
+        return obs;
 }
-*/
+
     public void Stop(){
         moveEnabled = false;
     }
 
     //Shots out rays and collects distance to the hit points
-    public float[] CollectRayInformation()
+    public double[] CollectRayInformation()
     {
-        float[] observations = new float[directions.Length];
+        double[] observations = new double[directions.Length];
 
         for (int i = 0; i < directions.Length; i++)
         {
-        //    RaycastHit2D hit = Physics2D.Raycast(transform.position, directions[i], Mathf.Infinity, rayObservationMask);
-        //    observations[i] = hit.distance;
-        //    if(debugMode)
-        //    Debug.DrawLine(transform.position, new Vector3(hit.point.x, hit.point.y, 0));
-        //
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, directions[i], Mathf.Infinity);
+            observations[i] = hit.distance;
+            Debug.Log("Hitpoint!" + hit.point.x);
+            Debug.DrawLine(transform.position, new Vector3(hit.point.x, hit.point.y, 0 ), Color.blue);
+        
         }
 
         return observations;
@@ -187,7 +182,7 @@ public override void CollectObservations()
 
     public float GetProgress()
     {
-        return 0.0f;
-       // return Vector2.Distance(transform.position, goalArea.transform.position);
+        
+        return Vector2.Distance(transform.position, goalArea.transform.position);
     }
 }

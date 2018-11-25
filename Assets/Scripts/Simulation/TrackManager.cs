@@ -64,7 +64,11 @@ public class TrackManager : MonoBehaviour
             if (bestCar != value)
             {
 
-  
+                //Update appearance
+                if (BestCar != null)
+                    BestCar.SpriteRenderer.sprite = NormalCarSprite;
+                if (value != null)
+                    value.SpriteRenderer.sprite = BestCarSprite;
 
                 //Set previous best to be second best now
                 CarController previousBest = bestCar;
@@ -113,6 +117,8 @@ public class TrackManager : MonoBehaviour
         get;
         private set;
     }
+    public Sprite NormalCarSprite;
+    public Sprite BestCarSprite;
     #endregion
 
     #region Constructors
@@ -232,8 +238,8 @@ public class TrackManager : MonoBehaviour
     private float GetCompletePerc(CarController car)
     {
 
-        Debug.Log("change this");
-        return 0.0f;
+//        Debug.Log(14.0f - car.Movement.GetProgress() / 14.0f);
+        return 14.0f - car.Movement.GetProgress() / 14.0f;
     }
     #endregion
 

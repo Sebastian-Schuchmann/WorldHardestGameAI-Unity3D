@@ -1692,6 +1692,7 @@ MonoBehaviour:
   enemyManager: {fileID: 707531577}
   progressText: {fileID: 552010234}
   failCounterText: {fileID: 1531808387}
+  moveEnabled: 1
 --- !u!1 &806746109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2369,6 +2370,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114666183244010964, guid: 903975d1214144dfea09ca85a5aa268e,
+        type: 2}
+      propertyPath: FNNTopology.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114666183244010964, guid: 903975d1214144dfea09ca85a5aa268e,
+        type: 2}
+      propertyPath: PopulationSize
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 903975d1214144dfea09ca85a5aa268e, type: 2}
   m_IsPrefabAsset: 0
@@ -2959,7 +2970,7 @@ MonoBehaviour:
     width: 1280
     height: 720
     qualityLevel: 5
-    timeScale: 1
+    timeScale: 2
     targetFrameRate: 60
   resetParameters:
     resetParameters: []
@@ -3009,7 +3020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19000001, y: 0.096}
   m_AnchorMax: {x: 0.73800004, y: 0.88400006}
-  m_AnchoredPosition: {x: 570.37756, y: 100.99992}
+  m_AnchoredPosition: {x: 570.37756, y: 101.00014}
   m_SizeDelta: {x: 94.899994, y: -32.899994}
   m_Pivot: {x: -1.7392265, y: -0.00000009541645}
 --- !u!114 &1531808387
@@ -3540,6 +3551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PrototypeCar: {fileID: 782671332}
+  NormalCarSprite: {fileID: 21300000, guid: a70abda004fca476f89467e725c69bdb, type: 3}
+  BestCarSprite: {fileID: 21300000, guid: 42b2a5015392c42da917a61cbe7215fb, type: 3}
 --- !u!1 &2141192869
 GameObject:
   m_ObjectHideFlags: 0

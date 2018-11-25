@@ -125,11 +125,12 @@ public class CarController : MonoBehaviour
         if (!UseUserInput)
         {
             //Get readings from sensors
-            double[] sensorOutput = new double[sensors.Length];
-            for (int i = 0; i < sensors.Length; i++)
-                sensorOutput[i] = sensors[i].Output;
+            double[] sensorOutput = Movement.CollectObservations();
+
+
 
             double[] controlInputs = Agent.FNN.ProcessInputs(sensorOutput);
+            //Debug.Log(controlInputs[0]);
             Movement.SetInputs(controlInputs);
         }
 
