@@ -137,24 +137,17 @@ public class TrackManager : MonoBehaviour
         startPosition = PrototypeCar.transform.position;
         startRotation = PrototypeCar.transform.rotation;
         PrototypeCar.gameObject.SetActive(false);
-
-
     }
 
-    void Start()
-    {
-
-    }
     #endregion
 
     #region Methods
     // Unity method for updating the simulation
-    void Update()
+    void FixedUpdate()
     {
         //Update reward for each enabled car on the track
-        for (int i = 0; i < cars.Count; i++)
+        foreach(RaceCar car in cars)
         {
-            RaceCar car = cars[i];
             if (car.Car.enabled)
             {
                 car.Car.CurrentCompletionReward = GetCompletePerc(car.Car);
@@ -164,7 +157,7 @@ public class TrackManager : MonoBehaviour
                     BestCar = car.Car;
                 else if (SecondBestCar == null || car.Car.CurrentCompletionReward >= SecondBestCar.CurrentCompletionReward)
                     SecondBestCar = car.Car;
-            }
+            } 
         }
     }
 
@@ -232,9 +225,9 @@ public class TrackManager : MonoBehaviour
     // This method will update the given checkpoint index accordingly to the current position.
     private float GetCompletePerc(CarController car)
     {
-
-//        Debug.Log(14.0f - car.Movement.GetProgress() / 14.0f);
-        return 14.0f - car.Movement.GetProgress() / 14.0f;
+        //if (car == bestCar)
+            //Debug.Log(car.Movement.GetProgress());
+        return car.Movement.GetProgress();
     }
     #endregion
 

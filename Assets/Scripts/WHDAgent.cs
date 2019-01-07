@@ -25,6 +25,7 @@ public class WHDAgent : MonoBehaviour
     public EnemyManager enemyManager;
     public Text progressText;
     public Text failCounterText;
+    bool logNextTime = false;
 
     double[] CurrentInputs;
 
@@ -34,6 +35,7 @@ public class WHDAgent : MonoBehaviour
     float lastProgress;
     float highestDist;
     float timeToLive;
+    bool reachedGoal = false;
     Vector3 startPosition;
 
     Vector2[] directions = {
@@ -58,13 +60,19 @@ public class WHDAgent : MonoBehaviour
 
         //The raycast used in observations shouldnt hit the player or enemies
         //They are just used to detect walls
-        rayObservationMask = ~(LayerMask.GetMask("Player"));
+        rayObservationMask = ~(LayerMask.GetMask("Player") + LayerMask.GetMask("Enemy")); 
+
     }
 
 
-    public void AgentReset()
+    public void AgentReset(bool reachedGoal)
     {
-        dying();
+        if(!reachedGoal){
+            dying();
+            this.reachedGoal = false;
+        } else {
+            this.reachedGoal = true;
+        }
         highestDist = 10000.0f;
         timeToLive = Time.time + timeToDie;
         resetPosition();
@@ -77,13 +85,14 @@ public class WHDAgent : MonoBehaviour
     public void restart()
     {
         moveEnabled = true;
+        reachedGoal = false;
     }
 
 
     public double[] CollectObservations()
 {
         
-        double[] obs = new double[11];
+        double[] obs = new double[26];
         obs[0] = transform.localPosition.x / 14.0f;
         obs[1] = transform.localPosition.y / 14.0f;
         obs[2] = Vector2.Distance(transform.localPosition, goalArea.transform.localPosition) / 14.0f;
@@ -92,11 +101,21 @@ public class WHDAgent : MonoBehaviour
         for (int i = 3; i < 11; i++){
            obs[i] = rays[i - 3];
         }
+
+        //Enemy observation (Distance, Angle, Speed 
+        for (int i = 11; i < 16; i++){ 
+                obs[i] = Vector2.Distance(transform.position, enemyManager.GetPositionOfEnemy(i-11)) / 13.0f; 
+                obs[i+1] = Vector2.Angle(transform.position, enemyManager.GetPositionOfEnemy(i-11)) / 180f; 
+                obs[i+2] = enemyManager.GetSpeedAndDirectionOfEnemy(i-11);         
+            } 
+
         return obs;
 }
 
     public void Stop(){
+//        Debug.Log("STOP");
         moveEnabled = false;
+        reachedGoal = false;
     }
 
     //Shots out rays and collects distance to the hit points
@@ -172,7 +191,7 @@ public class WHDAgent : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
           //  AddReward(-1.0f);
-            AgentReset();
+            AgentReset(false);
             failCounter++;
         }
 
@@ -180,13 +199,22 @@ public class WHDAgent : MonoBehaviour
         {
             failCounter = 0;
          //   AddReward(1.0f);
-            AgentReset();
+            AgentReset(true);
         }
     }
 
     public float GetProgress()
     {
-        
-        return Vector2.Distance(transform.position, goalArea.transform.position);
+        lastProgress = 8*Mathf.Pow(
+            (0.5f - Vector2.Distance(transform.position, goalArea.transform.position) / 28.0f), 4f);
+
+
+        if (reachedGoal)
+        {
+         
+            lastProgress += 0.5f;
+        }
+
+        return lastProgress;
     }
 }

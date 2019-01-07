@@ -25,7 +25,7 @@ public class CarController : MonoBehaviour
     #endregion
 
     // Maximum delay in seconds between the collection of two checkpoints until this car dies.
-    private const float MAX_CHECKPOINT_DELAY = 7;
+    public float TimeToLive = 7;
 
     /// <summary>
     /// The underlying AI agent of this car.
@@ -112,29 +112,22 @@ public class CarController : MonoBehaviour
         this.enabled = true;
     }
 
-    // Unity method for normal update
-    void Update()
-    {
-        timeSinceLastCheckpoint += Time.deltaTime;
-    }
-
     // Unity method for physics update
     void FixedUpdate()
     {
+//        Debug.Log("Time: " + timeSinceLastCheckpoint + " - MaxTime:" + TimeToLive);
+        timeSinceLastCheckpoint += Time.fixedDeltaTime;
         //Get control inputs from Agent
         if (!UseUserInput)
         {
             //Get readings from sensors
             double[] sensorOutput = Movement.CollectObservations();
 
-
-
             double[] controlInputs = Agent.FNN.ProcessInputs(sensorOutput);
-            //Debug.Log(controlInputs[0]);
             Movement.SetInputs(controlInputs);
         }
 
-        if (timeSinceLastCheckpoint > MAX_CHECKPOINT_DELAY)
+        if (timeSinceLastCheckpoint > TimeToLive)
         {
             Die();
         }
