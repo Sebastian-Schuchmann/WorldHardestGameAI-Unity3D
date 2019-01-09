@@ -57,6 +57,7 @@ public class WHDAgent : Agent
 
     public override void AgentReset()
     {
+        
         if (LogDataToFirebase)
         {
             WorldHardestGameLogData logData = new WorldHardestGameLogData(highestDist, transform.position);
@@ -66,6 +67,7 @@ public class WHDAgent : Agent
         highestDist = 10000.0f;
         timeToLive = Time.time + timeToDie;
         transform.position = startPosition;
+        Done();
     }
 
     public override void CollectObservations()
@@ -115,38 +117,38 @@ public class WHDAgent : Agent
 
         //Negative Reward for Time
         AddReward(-0.01f/timeToDie);
+        //Debug.Log("Input from " + gameObject.name + " (" + vectorAction.Length + "): " + vectorAction[0] + ", " + vectorAction[1]);
+        //float HorizontalInput = 0.0f, VerticalInput = 0.0f;
 
-        float HorizontalInput = 0.0f, VerticalInput = 0.0f;
+        //switch ((int)vectorAction[0])
+        //{
+        //    case 1:
+        //        VerticalInput = 1.0f;
+        //        break;
+        //    case 2:
+        //        VerticalInput = -1.0f;            
+        //        break;
+        //    case 0:
+        //        VerticalInput = 0.0f;
+        //        break;
+        //}
 
-        switch ((int)vectorAction[0])
-        {
-            case 1:
-                VerticalInput = 1.0f;
-                break;
-            case 2:
-                VerticalInput = -1.0f;            
-                break;
-            case 0:
-                VerticalInput = 0.0f;
-                break;
-        }
-
-        switch ((int)vectorAction[1])
-        {
-            case 1:
-                HorizontalInput = -1.0f;               
-                break;
-            case 2:
-                HorizontalInput = 1.0f;
-                break;
-            case 0:
-                HorizontalInput = 0.0f;
-                break;
-        }
+        //switch ((int)vectorAction[1])
+        //{
+        //    case 1:
+        //        HorizontalInput = -1.0f;               
+        //        break;
+        //    case 2:
+        //        HorizontalInput = 1.0f;
+        //        break;
+        //    case 0:
+        //        HorizontalInput = 0.0f;
+        //        break;
+        //}
 
         //Apply movement
-        float movementX = HorizontalInput * speed;
-        float movementY = VerticalInput * speed;
+        float movementX = vectorAction[0] * speed;
+        float movementY = vectorAction[1] * speed;
         transform.position = transform.position + new Vector3(movementX, movementY, 0);
 
         //Update last Progress and highest Distance

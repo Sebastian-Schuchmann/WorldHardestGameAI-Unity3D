@@ -1,17 +1,5 @@
-11/7/2018 11:35:36 PM
+1/7/2019 3:13:28 PM
  
-Log
-[Firebase Manager] Instance 'Firebase Manager [Singleton] (UnityEngine.GameObject)' was generated in the scene with DontDestroyOnLoad.
-UnityEngine.Debug:Log(Object)
-SimpleFirebaseUnity.FirebaseManager:get_Instance() (at Assets/SimpleFirebaseUnity/Scripts/FirebaseManager.cs:79)
-SimpleFirebaseUnity.FirebaseRoot:StartCoroutine(IEnumerator) (at Assets/SimpleFirebaseUnity/Scripts/FirebaseRoot.cs:131)
-SimpleFirebaseUnity.Firebase:PushJson(String, FirebaseParam) (at Assets/SimpleFirebaseUnity/Scripts/Firebase.cs:692)
-SimpleFirebaseUnity.Firebase:Push(String, Boolean, FirebaseParam) (at Assets/SimpleFirebaseUnity/Scripts/Firebase.cs:731)
-SimpleFirebaseUnity.Firebase:Push(String, Boolean, String) (at Assets/SimpleFirebaseUnity/Scripts/Firebase.cs:716)
-Logger:LogData(WorldHardestGameLogData) (at Assets/Logger.cs:59)
-WHDAgent:AgentReset() (at Assets/Scripts/WHDAgent.cs:44)
-MLAgents.Agent:_AgentReset() (at Assets/ML-Agents/Scripts/Agent.cs:806)
-MLAgents.Academy:ForcedFullReset() (at Assets/ML-Agents/Scripts/Academy.cs:519)
-MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:562)
-MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:610)
+Warning
+GameObject (named 'Brain') references runtime script in scene file. Fixing!
 
